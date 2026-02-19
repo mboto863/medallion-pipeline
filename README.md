@@ -7,7 +7,7 @@ A hands-on, end-to-end demonstration of the Medallion Architecture data pipeline
 - **Gold Layer**: data in this layer needs to encourage analysis and interpretation, with low effort.
 
 ```mermaid
-    flowchart LR
+    flowchart TD
         A[Raw Files] --> B[Auto Loader]
         B --> C[Bronze Delta]
         C --> D[Transformations]
