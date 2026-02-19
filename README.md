@@ -8,7 +8,10 @@ A hands-on, end-to-end demonstration of the Medallion Architecture data pipeline
 
 ```mermaid
     flowchart LR
-        A[Raw Data Files] --> B[Bronzwe Layer<br/>Auto Loader]
-        B --> C[Silver Layer<br/>Cleaned & Structured]
-        C --> D[Gold Layer<br/>Aggregated Tables]
+        A[Raw Files] --> B[Auto Loader]
+        B --> C[Bronze Delta]
+        C --> D[Transformations]
+        D --> E[Silver Delta]
+        E --> F[Aggregations / Metrics]
+        F --> G[Gold Delta]
 ```
