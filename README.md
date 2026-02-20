@@ -22,8 +22,8 @@ A hands-on, end-to-end demonstration of the Medallion Architecture data pipeline
 medallion-pipeline/
 │
 ├── notebooks/
-├── 00_setup_catalog_and_schemas.sql
-├── 01_generate_orders.py
+│ ├── 00_setup_catalog_and_schemas.sql
+│ ├── 01_generate_orders.py
 │ ├── 02_bronze_ingest_autoloader.py
 │ ├── 03_silver_transform.py
 │ └── 04_gold_aggregations.py
