@@ -15,3 +15,26 @@ A hands-on, end-to-end demonstration of the Medallion Architecture data pipeline
         E --> F[Aggregations / Metrics]
         F --> G[Gold Delta]
 ```
+
+## Repository Structure
+
+medallion-pipeline/
+│
+├── notebooks/
+├── 00_setup_catalog_and_schemas.sql
+├── 01_generate_orders.py
+│ ├── 02_bronze_ingest_autoloader.py
+│ ├── 03_silver_transform.py
+│ └── 04_gold_aggregations.py
+│
+├── workflows/
+│ └── medallion_pipeline.json
+│
+├── sample_data/
+│ └── README.md
+│
+├── diagrams/
+│ └── medallion_architecture.png
+│
+├── .gitignore
+└── README.md
