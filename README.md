@@ -18,6 +18,7 @@ A hands-on, end-to-end demonstration of the Medallion Architecture data pipeline
 
 ## Repository Structure
 
+```
 medallion-pipeline/
 │
 ├── notebooks/
@@ -40,6 +41,7 @@ medallion-pipeline/
 │
 ├── .gitignore
 └── README.md
+```
 
 - **notebooks/** — All ETL notebooks for Bronze, Silver, and Gold.
 - **workflows/** — Databricks serverless job definition (JSON).
