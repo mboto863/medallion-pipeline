@@ -1,0 +1,11 @@
+{"amount":46.56,"channel":"web","country":"ES","currency":"EUR","customer_id":911,"order_date":"2025-12-01T11:23:10","order_id":"O161BA3054F","status":"shipped"}
+{"amount":76.35,"channel":"web","country":"US","currency":"USD","customer_id":3314,"order_date":"2025-12-01T23:59:28","order_id":"ODE0B59BC32","status":"shipped"}
+{"amount":473.29,"channel":"in_store","country":"UK","currency":"GBP","customer_id":3113,"order_date":"2025-12-01T07:00:31","order_id":"OCEF8D392F8","status":"shipped"}
+{"amount":87.31,"channel":"web","country":"DE","currency":"EUR","customer_id":3952,"order_date":"2025-12-01T10:14:15","order_id":"O2F0272DE6C","status":"shipped"}
+{"amount":207.98,"channel":"mobile","country":"DE","currency":"EUR","customer_id":1941,"order_date":"2025-12-01T20:18:18","order_id":"O03695AD38A","status":"processing"}
+{"amount":242.42,"channel":"web","country":"FR","currency":"EUR","customer_id":3973,"order_date":"2025-12-01T05:09:50","order_id":"O6E8DC6A0C4","status":"shipped"}
+{"amount":106.63,"channel":"mobile","country":"DE","currency":"EUR","customer_id":3439,"order_date":"2025-12-01T18:00:35","order_id":"O1FB217B3C1","status":"shipped"}
+{"amount":189.26,"channel":"web","country":"FR","currency":"EUR","customer_id":2367,"order_date":"2025-12-01T17:45:41","order_id":"O6FB7D936BB","status":"refunded"}
+{"amount":473.06,"channel":"web","country":"US","currency":"USD","customer_id":2226,"order_date":"2025-12-01T14:03:09","order_id":"O99181BCF58","status":"shipped"}
+{"amount":92.27,"channel":"in_store","country":"US","currency":"USD","customer_id":3796,"order_date":"2025-12-01T13:31:54","order_id":"O91069CE218","status":"shipped"}
+{"amount":180.88,"channel":"web","country":"UK","currency":"GBP","customer_id":16,"order_date":"2025-12-01T02:33:28","order_id":"O3FC9C854B0","status":"shipped"}
