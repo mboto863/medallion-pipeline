@@ -59,5 +59,7 @@ medallion-pipeline/
 - PySpark
 - Structured Streaming
 
+#### Databricks
 
+The project was developed and tested in the Databricks platform. Databricks underlying running engine is Apache Spark, which makes pyspark and spark sql very easy to use in databricks notebooks.
 
