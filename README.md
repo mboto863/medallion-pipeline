@@ -61,5 +61,5 @@ medallion-pipeline/
 
 #### Databricks
 
-The project was developed and tested in the Databricks platform. Databricks underlying running engine is Apache Spark, which makes pyspark and spark sql very easy to use in databricks notebooks.
+The project was developed and tested on the Databricks Lakehouse Platform. Databricks offers native support for Apache Spark, enabling easy use of PySpark and Spark SQL within notebooks while handling cluster management and optimization on the background.
 
