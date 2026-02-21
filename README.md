@@ -63,7 +63,7 @@ medallion-pipeline/
 
 The project was developed and tested on the Databricks Lakehouse Platform. Databricks offers native support for Apache Spark, enabling easy use of PySpark and Spark SQL within notebooks while handling cluster management and optimization on the background.
 
-### PySpark
+#### PySpark
 
 PySpark's DataFrame API feels pythonic, as if I am interacting with structured and unstructured data that have been mapped to python objects. This sounds like an **Object-Relational Mapping** framework, but it isn't.
 
