@@ -15,7 +15,7 @@ A hands-on, end-to-end demonstration of the Medallion Architecture data pipeline
         E --> F[Aggregations / Metrics]
         F --> G[Gold Delta]
 ```
-
+Purposefully using technologies to handle large amounts of data in non conventional formats, the focus of the project is completely on the workflow and the generated data serves as placeholder.
 ## Repository Structure
 
 ```
@@ -54,10 +54,8 @@ medallion-pipeline/
 
 - Databricks
 - PySpark
-- Auto Loader
 - Delta Lake
-- Serverless Jobs
-- Structured Streaming
+- Auto Loader
 
 #### Databricks
 
@@ -68,3 +66,7 @@ The project was developed and tested on the Databricks Lakehouse Platform. Datab
 PySpark's DataFrame API feels pythonic, as if I am interacting with structured and unstructured data that have been mapped to python objects. This sounds like an **Object-Relational Mapping** framework, but it isn't.
 
 Let's take a digression to Pandas. A Pandas DataFrame represents data, and a Pandas DataFrame object is an actual **in-memory wrapper of the data it represents**. With PySpark, we can't say a Spark DataFrame is a python object wrapping data, because if we 'unwrap' the object we actually find a plan for querying the data, to be executed by Apache Spark in a distributed way. In this way, Apache Spark adds another layer of abstraction between python objects and data, which allows for the processing of datasets that far exceed local memory.
+
+#### Delta Lake
+
+The Delta Lake defines the storage format of the individual layers. It extends a Data Lake, adding protocols to enable transactional features and schema management, essentially bringing the reliability of database-style transactions to cloud object storage and enables consistent handling of large-scale data pipelines.
