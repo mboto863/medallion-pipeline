@@ -74,4 +74,4 @@ The Delta Lake defines the storage format of the individual layers. It extends a
 
 #### Auto Loader
 
-Databricks Auto Loader is another fancy file reader. Databricks recommends using Auto Loader for incremental ingestion workloads against data stored in cloud object storage. It doesn't show itself explicitly in the notebooks. Auto Loader takes control with `spark.readStream.format('cloudfiles').option('cloudFiles.format', 'json')`
+Databricks Auto Loader is another fancy file reader. Databricks recommends using Auto Loader for incremental ingestion workloads against data stored in cloud object storage. It doesn't show itself explicitly in the notebooks. Auto Loader takes control when the argument of the `format` method of the spark interface is `'cloudfiles'`. With `spark.readStream.format('cloudfiles').option('cloudFiles.format', 'json')` databricks replaces spark's file streaming with Auto Loader. We use serveless computing in order to reduce computing costs, so we end up not using all of the Auto Loader functionalities, such as it's capability to continuously discover new files.
