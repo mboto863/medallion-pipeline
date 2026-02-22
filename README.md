@@ -15,7 +15,8 @@ A hands-on, end-to-end demonstration of the Medallion Architecture data pipeline
         E --> F[Aggregations / Metrics]
         F --> G[Gold Delta]
 ```
-Purposefully using technologies to handle large amounts of data in non conventional formats, the focus of the project is completely on the workflow and the generated data serves as placeholder.
+Purposefully using technologies to handle large amounts of data in non conventional formats, the focus of the project is completely on the workflow and the generated data serves as a placeholder.
+
 ## Repository Structure
 
 ```
@@ -69,4 +70,8 @@ Let's take a digression to Pandas. A Pandas DataFrame represents data, and a Pan
 
 #### Delta Lake
 
-The Delta Lake defines the storage format of the individual layers. It extends a Data Lake, adding protocols to enable transactional features and schema management, essentially bringing the reliability of database-style transactions to cloud object storage and enables consistent handling of large-scale data pipelines.
+The Delta Lake defines the storage format of the individual layers. It extends a Data Lake, adding protocols to enable transactional features and schema management, essentially bringing the reliability of database-style transactions to cloud object storage and enabling consistent handling of large-scale data pipelines.
+
+#### Auto Loader
+
+Databricks Auto Loader is another fancy file reader. Databricks recommends using Auto Loader for incremental ingestion workloads against data stored in cloud object storage. It doesn't show itself explicitly in the notebooks. Auto Loader takes control with `spark.readStream.format('cloudfiles').option('cloudFiles.format', 'json')`
