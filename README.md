@@ -74,4 +74,28 @@ The Delta Lake defines the storage format of the individual layers. It extends a
 
 #### Auto Loader
 
-Databricks Auto Loader is another fancy file reader. Databricks recommends using Auto Loader for incremental ingestion workloads against data stored in cloud object storage. It doesn't show itself explicitly in the notebooks. Auto Loader takes control when the argument of the `format` method of the spark interface is `'cloudfiles'`. With `spark.readStream.format('cloudfiles').option('cloudFiles.format', 'json')` databricks replaces spark's file streaming with Auto Loader. We use serveless computing in order to reduce computing costs, so we end up not using all of the Auto Loader functionalities, such as it's capability to continuously discover new files.
+Databricks Auto Loader is another fancy file reader. Databricks recommends using Auto Loader for incremental ingestion workloads against data stored in cloud object storage.
+
+It doesn't show itself explicitly in the notebooks, because it is not a separate API surface. Auto Loader is invoked when the argument of the `format` method of the spark interface is `'cloudfiles'`, and is configured in the `cloudFiles.*` namespace.
+
+Refer to notebook 02_bronze_ingest_autoloader.py now. After
+```
+bronze_df = (
+  spark.readStream
+    .format("cloudFiles")
+    .option("cloudFiles.format", "json")
+    .option("cloudFiles.schemaLocation", SCHEMA_LOCATION)
+    .load(RAW_PATH)
+    .drop("dt")
+)
+```
+We have set and configured Auto Loader as the streaming source for the files. Now notice the trigger configuration we have given it in
+```
+(bronze_df.writeStream
+  .format("delta")
+  .option("mergeSchema", "true")
+  .option("checkpointLocation", CHECKPOINT)
+  .trigger(availableNow=True) # batch like ingestion, recommended for optimizing compute costs.
+  .toTable("bronze.orders_raw"))
+```
+Serverless jobs don't support continuous scheduling, so databricks recommends scheduled batch writing with the `availableNow` argument. This is also for cost optimization, we don't have Auto Loader continuously streaming new files here.
