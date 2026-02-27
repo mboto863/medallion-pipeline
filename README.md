@@ -99,3 +99,14 @@ We have set and configured Auto Loader as the streaming source for the files. No
   .toTable("bronze.orders_raw"))
 ```
 Serverless jobs don't support continuous scheduling, so databricks recommends scheduled batch writing with the `availableNow` argument. This is also for cost optimization, we don't have Auto Loader continuously streaming new files here.
+
+## How to Use
+
+The notebooks are numbered according to the order in which they should be executed.
+To run the pipeline:
+
+1. Import the notebooks into Databricks.
+2. Use a separate demo catalog or schema to keep the project isolated from other data.
+3. Update the catalog and schema names to match your environment.
+
+This ensures the pipeline can run safely without affecting existing datasets.
